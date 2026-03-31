@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* ─── Font Faces ─── */
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotesk/NeueHaasGrotText-55Roman-Trial.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotesk/NeueHaasGrotText-65Medium-Trial.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotesk/NeueHaasGrotText-75Bold-Trial.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("/fonts/AktivGrotesk/AktivGrotesk-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("/fonts/AktivGrotesk/AktivGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("/fonts/AktivGrotesk/AktivGrotesk-Bold.ttf") format("truetype");
+  font-weight: 600; /* mapped to Bold since no SemiBold exists */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Color Tokens ─── */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --color-primary: #0d1b3e;
+  --color-secondary: #3a6bc4;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+}
+
+/* ─── Tailwind v4 Theme ─── */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+
+  --font-heading: "Neue Haas Grotesk", Arial, sans-serif;
+  --font-sans: "Neue Haas Grotesk", Arial, sans-serif;
+  --font-ui: "Aktiv Grotesk", Arial, sans-serif;
+}
+
+/* ─── Dark mode ─── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ─── Base Styles ─── */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Neue Haas Grotesk", Arial, sans-serif;
+  font-weight: 400; /* 55 Roman */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings → Neue Haas Grotesk 65 Medium */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Neue Haas Grotesk", Arial, sans-serif;
+  font-weight: 500; /* 65 Medium */
+}
+
+/* ─── Typography Utilities ─── */
+.heading-intro {
+  font-family: "Neue Haas Grotesk", Arial, sans-serif;
+  font-weight: 500; /* 65 Medium */
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heading-intro {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.heading-section {
+  font-family: "Neue Haas Grotesk", Arial, sans-serif;
+  font-weight: 500; /* 65 Medium */
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.text-body {
+  font-family: "Neue Haas Grotesk", Arial, sans-serif;
+  font-weight: 400; /* 55 Roman */
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-muted);
+}
+
+/* Buttons → Aktiv Grotesk only */
+.text-button {
+  font-family: "Aktiv Grotesk", Arial, sans-serif;
+  font-weight: 600; /* Bold mapped to 600 */
+  font-size: 14px;
+}
+
+/* ─── Layout Utilities ─── */
+.container-custom {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-padding {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+/* ─── Input placeholder ─── */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
