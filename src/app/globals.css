@@ -58,11 +58,12 @@
   --foreground: #171717;
 
   --color-primary: #0d1b3e;
-  --color-secondary: #3a6bc4;
+  /* --color-secondary: #3a6bc4; */
+  --color-secondary: #1c5d96;
   --color-muted: #6b7280;
   --color-border: #e5e7eb;
-   /* ── Add this ── */
-  --color-heading:   #434343;   /* ← used for all headings */
+  /* ── Add this ── */
+  --color-heading: #434343; /* ← used for all headings */
 }
 
 /* ─── Tailwind v4 Theme ─── */
@@ -74,8 +75,8 @@
   --color-muted: var(--color-muted);
   --color-border: var(--color-border);
 
-    /* ── Add this ── */
-  --color-heading:    var(--color-heading);
+  /* ── Add this ── */
+  --color-heading: var(--color-heading);
 
   --font-heading: "Neue Haas Grotesk", Arial, sans-serif;
   --font-sans: "Neue Haas Grotesk", Arial, sans-serif;
@@ -165,5 +166,5 @@ h6 {
 
 /* ─── Input placeholder ─── */
 input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: #6B6B6B;
 }
