@@ -61,6 +61,8 @@
   --color-secondary: #3a6bc4;
   --color-muted: #6b7280;
   --color-border: #e5e7eb;
+   /* ── Add this ── */
+  --color-heading:   #434343;   /* ← used for all headings */
 }
 
 /* ─── Tailwind v4 Theme ─── */
@@ -71,6 +73,9 @@
   --color-secondary: var(--color-secondary);
   --color-muted: var(--color-muted);
   --color-border: var(--color-border);
+
+    /* ── Add this ── */
+  --color-heading:    var(--color-heading);
 
   --font-heading: "Neue Haas Grotesk", Arial, sans-serif;
   --font-sans: "Neue Haas Grotesk", Arial, sans-serif;
