@@ -127,7 +127,25 @@ h6 {
     line-height: 40px;
   }
 }
+/* Accordion item title — Neue Haas Grotesk 65 Medium */
+.heading-accordion-item {
+  font-family: "Neue Haas Grotesk", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0;
+}
 
+/* Accordion item content — Neue Haas Grotesk 55 Roman */
+.accordion-item-content {
+  font-family: "Neue Haas Grotesk", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+ 
 .heading-section {
   font-family: "Neue Haas Grotesk", Arial, sans-serif;
   font-weight: 500; /* 65 Medium */

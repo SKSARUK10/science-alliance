@@ -1,8 +1,10 @@
 import CommitmentSection from "../components/sections/CommitmentSection";
 import Hero from "../components/sections/Hero"
 import IntroSection from "../components/sections/IntroSection";
+import QuicklinkSection from "../components/sections/QuicklinkSection";
 import ScienceSection from "../components/sections/ScienceSection";
 import TruthSection from "../components/sections/TruthSection";
+import WhatWeFocusOn from "../components/sections/WhatWeFocusOn";
 
 export default function Home() {
   return (
@@ -11,7 +13,9 @@ export default function Home() {
       <IntroSection />
       <ScienceSection />
       <CommitmentSection />
-      <TruthSection/>
+      <TruthSection />
+      <WhatWeFocusOn />
+      <QuicklinkSection />
     </main>
   );
 }

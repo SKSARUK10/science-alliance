@@ -7,7 +7,7 @@ export default function ScienceSection() {
   const { heading, body, button, image } = scienceContent;
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-white">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
           {/* ── Left: Content ── */}

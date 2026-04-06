@@ -17,7 +17,7 @@ export default function Navbar() {
         {/* ── Left: Logo ── */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/salt-logo.png"
+            src="/hero-1.svg"
             alt="SALT Science Alliance Logo"
             width={130}
             height={50}

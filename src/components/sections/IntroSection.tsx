@@ -1,13 +1,13 @@
 export default function IntroSection() {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 text-center">
         {/* Title → Neue Haas Grotesk 65 Medium */}
         <h2
           style={{
             fontFamily: "'Neue Haas Grotesk', Arial, sans-serif",
             fontWeight: 500, // 65 Medium
-            fontSize: "clamp(28px, 4vw, 40px)",
+            fontSize: "clamp(28px, 4vw, 48px)",
             lineHeight: "40px",
             letterSpacing: "0%",
             textAlign: "center",
