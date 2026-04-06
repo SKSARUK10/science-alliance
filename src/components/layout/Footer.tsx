@@ -33,9 +33,13 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-auto">
           <div className="container-custom py-4 flex items-center justify-between">
             <span className="text-xs text-white/35">{FOOTER_COPYRIGHT}</span>
-            <span className="text-xs text-white/35 tracking-widest uppercase">
-              Made by Digital Alchemy
-            </span>
+            <Image
+              src="/footer logo.svg"
+              alt="Digital Alchemy"
+              width={182} // adjust based on your design
+              height={18}
+              className="opacity-80 hover:opacity-100 transition-opacity"
+            />
           </div>
         </div>
       </div>

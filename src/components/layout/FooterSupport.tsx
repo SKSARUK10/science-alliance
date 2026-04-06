@@ -2,10 +2,24 @@
 import Link from "next/link";
 import { HERO_CONTENT } from "../../constants/hero";
 import Image from "next/image";
+import { useInView } from "../../hooks/useInView";
 
 export default function FooterSupport() {
+  const { ref, isInView } = useInView();
+
   return (
-    <div className="relative overflow-hidden w-full h-[563px]">
+    <div ref={ref} className="relative overflow-hidden w-full h-[563px]">
+      <style>{`
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
+        .anim-fade-up { opacity: 0; animation: fadeUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        .anim-slide-left { opacity: 0; animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.5s; }
+        .btn-lift { transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .btn-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2); }
+      `}</style>
       {/* Background Image */}
       <Image
         src="/footer-top.png"
@@ -29,7 +43,7 @@ export default function FooterSupport() {
               lineHeight: "56px",
               letterSpacing: "0%",
             }}
-            className="text-[#FDF5EC] mb-4"
+            className={`${isInView ? "anim-slide-left" : "opacity-0"} delay-1 text-[#FDF5EC] mb-4`}
           >
             Support Science that Protects and Values Every Human Life
           </h2>
@@ -43,13 +57,15 @@ export default function FooterSupport() {
               lineHeight: "28px",
               letterSpacing: "0%",
             }}
-            className="text-white/80 mb-8"
+            className={`${isInView ? "anim-fade-up" : "opacity-0"} delay-2 text-white/80 mb-8`}
           >
             Join us in driving innovation that protects human life.
           </p>
 
           {/* Buttons with cross-hover */}
-          <div className="flex items-center gap-2 group">
+          <div
+            className={`${isInView ? "anim-fade-up" : "opacity-0"} delay-3 flex items-center gap-2 group`}
+          >
             {/* White Button → Aktiv Grotesk */}
             <Link
               href={HERO_CONTENT.buttonHref}
@@ -60,6 +76,7 @@ export default function FooterSupport() {
                 lineHeight: "28px",
               }}
               className="
+                btn-lift
                 flex items-center justify-center
                 w-[162px] h-[52px]
                 px-5 py-4
@@ -76,6 +93,7 @@ export default function FooterSupport() {
             <Link
               href={HERO_CONTENT.buttonHref}
               className="
+                btn-lift
                 flex items-center justify-center
                 w-[46px] h-[52px]
                 rounded-lg

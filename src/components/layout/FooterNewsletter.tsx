@@ -16,13 +16,18 @@ export default function FooterNewsletter() {
   };
 
   const inputClass = `
-    w-full bg-white/10 border border-white/15 rounded-md
-    px-4 py-3 text-sm text-white placeholder:text-white/40
-    outline-none focus:border-white/40 transition-colors duration-200
+    w-full border border-[#769DBE] rounded-[8px]
+    px-4 outline-none focus:border-white/40 transition-colors duration-200
   `;
 
+  const inputStyle = {
+    height: "56px",
+    backgroundColor: "#769DBE",
+    color: "#ffffff",
+  };
+
   return (
-    <div className="flex flex-col gap-5">
+    <div className="footer-newsletter flex flex-col gap-5">
       <h3 className="font-heading text-[22px] font-semibold text-white leading-snug">
         Stay Informed on the Fight for Ethical Science
       </h3>
@@ -33,6 +38,7 @@ export default function FooterNewsletter() {
           value={form.fullName}
           onChange={(e) => setForm({ ...form, fullName: e.target.value })}
           className={inputClass}
+          style={inputStyle}
         />
         <input
           type="text"
@@ -40,6 +46,7 @@ export default function FooterNewsletter() {
           value={form.organization}
           onChange={(e) => setForm({ ...form, organization: e.target.value })}
           className={inputClass}
+          style={inputStyle}
         />
         <div className="flex gap-2.5">
           <input
@@ -48,10 +55,12 @@ export default function FooterNewsletter() {
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className={`${inputClass} flex-1`}
+            style={inputStyle}
           />
           <button
             type="submit"
-            className="bg-[#3a6bc4] hover:bg-[#2d57a8] text-white text-sm font-medium px-5 py-3 rounded-md transition-colors duration-200 whitespace-nowrap"
+            className="bg-[#3a6bc4] hover:bg-[#6095DC] text-white text-sm font-medium px-5 rounded-[8px] transition-colors duration-200 whitespace-nowrap"
+            style={{ height: "56px" }}
           >
             Subscribe
           </button>
