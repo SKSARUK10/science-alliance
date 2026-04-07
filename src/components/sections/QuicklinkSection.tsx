@@ -25,11 +25,11 @@ export default function QuicklinkSection() {
         <div className="container-custom">
           {/* ── Heading ── */}
           <h2
-            className={`${isInView ? "anim-fade-up" : "opacity-0"} delay-0 mb-10`}
+            className={`${isInView ? "anim-fade-up" : "opacity-0"} delay-0 mb-7`}
             style={{
               fontFamily: "'Neue Haas Grotesk', Arial, sans-serif",
               fontWeight: 500,
-              fontSize: "clamp(28px, 4vw, 40px)",
+              fontSize: "clamp(28px, 4vw, 48px)",
               lineHeight: "1.2",
               color: "#434343",
             }}
@@ -38,7 +38,7 @@ export default function QuicklinkSection() {
           </h2>
 
           {/* ── Cards Grid ── */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4.5 ">
             {cards.map((card, index) => {
               const delayClass = `delay-${Math.min(index + 1, 3)}`;
               return (

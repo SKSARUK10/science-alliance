@@ -24,7 +24,7 @@ export default function ScienceSection() {
         .btn-lift { transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
         .btn-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2); }
       `}</style>
-      <section className="py-12 bg-white">
+      <section className=" bg-white">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
             {/* ── Left: Content ── */}

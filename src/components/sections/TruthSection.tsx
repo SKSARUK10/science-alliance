@@ -20,7 +20,7 @@ export default function TruthSection() {
         .delay-1 { animation-delay: 0.2s; }
         .delay-2 { animation-delay: 0.4s; }
       `}</style>
-      <section className="py-16 bg-white">
+     <section className="pb-14 bg-white"> 
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
             <div className="flex-1">
