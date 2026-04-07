@@ -117,10 +117,85 @@ export default function Hero() {
         .btn-glow:hover {
           animation: none;
         }
+
+        /* Mobile Responsive Typography */
+        @media (max-width: 768px) {
+          .hero-heading {
+            font-size: 36px !important;
+            line-height: 44px !important;
+          }
+          
+          .hero-subheading {
+            font-size: 16px !important;
+            line-height: 24px !important;
+          }
+          
+          .hero-button-text {
+            font-size: 16px !important;
+            line-height: 24px !important;
+          }
+
+          .hero-button-main {
+            width: 140px !important;
+            height: 48px !important;
+            padding: 12px 16px !important;
+          }
+
+          .hero-button-arrow {
+            width: 48px !important;
+            height: 48px !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero-section {
+            height: auto !important;
+            min-height: 500px !important;
+            padding-top: 80px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero-section {
+            min-height: 420px !important;
+          }
+
+          .hero-heading {
+            font-size: 28px !important;
+            line-height: 36px !important;
+          }
+          
+          .hero-subheading {
+            font-size: 14px !important;
+            line-height: 22px !important;
+          }
+
+          .hero-button-text {
+            font-size: 14px !important;
+            line-height: 22px !important;
+          }
+
+          .hero-button-main {
+            width: 120px !important;
+            height: 44px !important;
+            padding: 10px 14px !important;
+          }
+
+          .hero-button-arrow {
+            width: 44px !important;
+            height: 44px !important;
+          }
+
+          .hero-buttons-container {
+            gap: 8px !important;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+        }
       `}</style>
 
       <section
-        className="relative w-full overflow-hidden"
+        className="hero-section relative w-full overflow-hidden pt-[80px] md:pt-[100px]"
         style={{ height: "557px" }}
       >
         {/* ── Background Image — fades in ── */}
@@ -143,10 +218,10 @@ export default function Hero() {
         />
 
         {/* ── Content ── */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-4 sm:px-6 py-12 sm:py-20">
           {/* Heading slides up first */}
           <h1
-            className={`${isInView ? "anim-slide-left" : "opacity-0"} delay-1 text-white max-w-[780px] mb-5`}
+            className={`${isInView ? "anim-slide-left" : "opacity-0"} delay-1 hero-heading text-white max-w-[780px] mb-3 sm:mb-5`}
             style={{
               fontFamily: "'Neue Haas Grotesk', Arial, sans-serif",
               fontWeight: 500,
@@ -161,7 +236,7 @@ export default function Hero() {
 
           {/* Subheading slides up second */}
           <p
-            className={`${isInView ? "anim-slide-right" : "opacity-0"} delay-2 text-white/85 max-w-[480px] mb-8`}
+            className={`${isInView ? "anim-slide-right" : "opacity-0"} delay-2 hero-subheading text-white/85 max-w-[480px] mb-6 sm:mb-8`}
             style={{
               fontFamily: "'Neue Haas Grotesk', Arial, sans-serif",
               fontWeight: 400,
@@ -174,12 +249,12 @@ export default function Hero() {
 
           {/* Buttons slide up last */}
           <div
-            className={`${isInView ? "anim-fade-up" : "opacity-0"} delay-3 flex items-center gap-1`}
+            className={`${isInView ? "anim-fade-up" : "opacity-0"} delay-3 hero-buttons-container flex items-center gap-1`}
           >
             {/* White Button */}
             <Link
               href={HERO_CONTENT.buttonHref}
-              className="btn-lift flex items-center justify-center w-[162px] h-[52px] px-5 py-4 text-gray-900 bg-white rounded-lg shadow-sm hover:bg-gray-100"
+              className="hero-button-main btn-lift flex items-center justify-center w-[162px] h-[52px] px-5 py-4 text-gray-900 bg-white rounded-lg shadow-sm hover:bg-gray-100"
               style={{
                 fontFamily: "'Aktiv Grotesk', Arial, sans-serif",
                 fontWeight: 600,
@@ -187,13 +262,13 @@ export default function Hero() {
                 lineHeight: "28px",
               }}
             >
-              Support&nbsp;&nbsp;SALT
+              <span className="hero-button-text">Support&nbsp;&nbsp;SALT</span>
             </Link>
 
             {/* Arrow Button */}
             <Link
               href={HERO_CONTENT.buttonHref}
-              className="btn-lift btn-glow flex items-center justify-center w-[46px] h-[52px] rounded-lg bg-[#219CB5] hover:bg-[#1b859c]"
+              className="hero-button-arrow btn-lift btn-glow flex items-center justify-center w-[46px] h-[52px] rounded-lg bg-[#219CB5] hover:bg-[#1b859c]"
             >
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                 <path

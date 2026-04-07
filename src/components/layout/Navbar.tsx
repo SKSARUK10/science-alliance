@@ -34,9 +34,9 @@ export default function Navbar() {
             <Image
               src="/hero-1.svg"
               alt="SALT Science Alliance Logo"
-              width={130}
-              height={50}
-              className="object-contain w-auto h-auto"
+              width={184}
+              height={74}
+               className="object-contain w-auto h-auto"
               priority
             />
           </Link>
