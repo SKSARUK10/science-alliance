@@ -28,7 +28,7 @@ export default function FooterNewsletter() {
 
   return (
     <div className="footer-newsletter flex flex-col gap-5">
-      <h3 className="font-heading text-[22px] font-semibold text-white leading-snug">
+      <h3 className="heading-h3 text-white">
         Stay Informed on the Fight for Ethical Science
       </h3>
       <form onSubmit={handleSubmit} className="flex flex-col gap-2.5">
