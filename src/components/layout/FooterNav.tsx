@@ -3,7 +3,7 @@ import { FOOTER_NAV_LINKS } from "../../constants/footer";
 
 export default function FooterNav() {
   return (
-    <nav className="flex flex-col">
+    <nav className="flex flex-col border-r border-white/10 pr-10 ">
       <span className="text-sm font-semibold text-white mb-4">Company</span>
       {FOOTER_NAV_LINKS.map((link) => (
         <Link

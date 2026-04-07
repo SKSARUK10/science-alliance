@@ -23,7 +23,7 @@ export default function Footer() {
       {/* Content */}
       <div className="relative h-full flex flex-col">
         <FooterSupport />
-        <div className="max-w-[1280px] mx-auto px-6 pt-16 pb-12 grid grid-cols-1 md:grid-cols-[1fr_160px_1fr] gap-12">
+        <div className="max-w-[1280px] mx-auto px-6 pt-16 pb-12 grid grid-cols-1 md:grid-cols-[1fr_160px_1fr] gap-19">
           <FooterBrand />
           <FooterNav />
           <FooterNewsletter />
