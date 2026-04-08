@@ -36,7 +36,7 @@ export default function Navbar() {
               alt="SALT Science Alliance Logo"
               width={184}
               height={74}
-               className="object-contain w-auto h-auto"
+              className="object-contain w-auto h-auto"
               priority
             />
           </Link>
@@ -50,11 +50,18 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   className={`
-                    text-[15px] font-medium transition-colors duration-200
+                    text-[15px] font-medium relative pb-2 group
                     ${isActive ? "text-white" : "text-white/70 hover:text-white"}
                   `}
                 >
                   {link.label}
+                  <span
+                    className={`
+                      absolute bottom-0 left-0 h-0.5 bg-[#219CB5]
+                      transition-all duration-300
+                      ${isActive ? "w-full" : "w-0 group-hover:w-full"}
+                    `}
+                  />
                 </Link>
               );
             })}
@@ -202,17 +209,25 @@ export default function Navbar() {
                       key={link.label}
                       href={link.href}
                       className={`
-                        px-6 py-4 text-[18px] font-semibold border-b border-white/20
-                        transition-colors duration-200
+                        px-6 py-4 text-[18px] font-semibold border-b
+                        relative group overflow-hidden
+                        transition-all duration-200
                         ${
                           isActive
-                            ? "bg-white/20 text-white"
+                            ? "bg-white/20 text-black"
                             : "text-white hover:bg-white/10"
                         }
                       `}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {link.label}
+                      <span
+                        className={`
+                          absolute bottom-0 left-0 h-1 bg-[#219CB5]
+                          transition-all duration-300
+                          ${isActive ? "w-0" : "w-0 group-hover:w-full"}
+                        `}
+                      />
                     </Link>
                   );
                 })}
