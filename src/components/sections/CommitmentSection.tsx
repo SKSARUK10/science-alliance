@@ -50,6 +50,7 @@ export default function CommitmentSection() {
                   fontWeight: 500, // 65 Medium
                   fontSize: "clamp(28px, 4vw, 40px)",
                   lineHeight: "48px",
+                  color: "#434343",
                   letterSpacing: "0%",
                 }}
               >

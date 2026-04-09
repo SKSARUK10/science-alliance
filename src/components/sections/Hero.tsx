@@ -206,7 +206,7 @@ export default function Hero() {
             src={HERO_CONTENT.imageSrc}
             alt={HERO_CONTENT.imageAlt}
             fill
-            className="object-cover object-center"
+            className="w-full h-auto rounded-xl object-cover object-center"
             priority
           />
         </div>

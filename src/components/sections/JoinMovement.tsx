@@ -113,8 +113,8 @@ export default function JoinMovement() {
         .join-movement-section {
           position: relative;
           overflow: hidden;
-          padding: 90px 0;
-          margin-bottom: 70px;
+          padding: clamp(40px, 8vw, 90px) 0;
+          margin-bottom: clamp(40px, 6vw, 70px);
           text-align: center;
         }
 
@@ -122,39 +122,43 @@ export default function JoinMovement() {
           object-fit: cover;
           object-position: center top;
           pointer-events: none;
+          z-index: 0;
         }
 
         .join-movement-inner {
           position: relative;
           z-index: 1;
+          padding: 0 16px;
         }
 
         .join-movement-heading {
           font-family: "Neue Haas Grotesk", Arial, sans-serif;
           font-weight: 400;
-          font-size: clamp(28px, 4vw, 46px);
-          line-height: 1.2;
+          font-size: clamp(24px, 5vw, 48px);
+          line-height: 56px;
+          line-spacing: 16px;
           color: #ffffff;
-          margin-bottom: 20px;
+          margin-bottom: clamp(16px, 3vw, 20px);
         }
 
         .join-movement-subtext {
           font-family: "Neue Haas Grotesk", Arial, sans-serif;
           font-weight: 400;
-        line-spacing: 16px;
-          font-size: 24px;
-          line-height: 28px;
+          line-spacing: 16px;
+          font-size: clamp(16px, 4vw, 24px);
+          line-height: 1.4;
           color: #fdf5ec;
-          margin: 0 auto 40px;
+          margin: 0 auto clamp(24px, 5vw, 40px);
           max-width: 640.22px;
+          padding: 0 8px;
         }
 
         .join-movement-form {
           display: flex;
           align-items: center;
-          width: 593.16px;
+          width: 100%;
+          max-width: 593.16px;
           height: 56px;
-          width: 593.16px;
           margin: 0 auto;
           background: #fff;
           border-radius: 8px;
@@ -162,10 +166,13 @@ export default function JoinMovement() {
           gap: 8px;
         }
 
-        @media (max-width: 560px) {
+        @media (max-width: 640px) {
           .join-movement-form {
             flex-direction: column;
+            height: auto;
+            align-items: stretch;
             padding: 12px;
+            gap: 12px;
           }
         }
 
@@ -175,6 +182,14 @@ export default function JoinMovement() {
           outline: none;
           font-size: 16px;
           background: transparent;
+          padding: 0 4px;
+        }
+
+        @media (max-width: 640px) {
+          .join-movement-input {
+            min-height: 44px;
+            padding: 12px 8px;
+          }
         }
 
         .join-movement-btn {
@@ -191,11 +206,22 @@ export default function JoinMovement() {
           line-height: 24px;
           letter-spacing: 0.05em; /* 5% */
           cursor: pointer;
+          flex-shrink: 0;
+        }
+
+        @media (max-width: 640px) {
+          .join-movement-btn {
+            width: 100%;
+            height: 44px;
+            font-size: 16px;
+            line-height: 20px;
+          }
         }
 
         .join-movement-error {
           color: #fca5a5;
           margin-top: 12px;
+          font-size: 14px;
         }
       `}</style>
     </section>

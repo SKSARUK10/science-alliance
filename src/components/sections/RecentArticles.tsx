@@ -48,7 +48,7 @@ export default function RecentArticles() {
                 fontFamily: "'Neue Haas Grotesk', Arial, sans-serif",
                 fontWeight: 500,
                 fontSize: "clamp(28px, 4vw, 48px)",
-                lineHeight: "1.2",
+                lineHeight: "40px",
                 color: "#434343",
               }}
             >
